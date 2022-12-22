@@ -1,4 +1,3 @@
-# cause we gotta do the GUIs my dude
 from tkinter import *
 
 # author: Efren Haskell
