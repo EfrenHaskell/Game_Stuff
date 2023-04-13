@@ -52,7 +52,7 @@ class game():
                 if len(self.comp_playable) > 0:
                     comp_play()
 
-        def config_play():
+        def config_play() -> int:
             # clear weights
             weights = {
                 0: 0,
@@ -138,10 +138,7 @@ class game():
         re_button = Button(self.hub, text = "RESTART", command = reset)
         re_button.grid(row = 1,column = 4)
 
-# main at bottom cause C++ supremacy
-def main():
+if __name__ == '__main__':
     # begin game client
     new_game = game()
     new_game.start_game()
-main()
-
