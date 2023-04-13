@@ -189,7 +189,7 @@ class game:
             print(self.data[i])
 
     # get tile data values
-    def get_data(self):
+    def get_data(self) -> str:
         res = ""
         for i in range(81):
             res += self.data[i] + "|"
@@ -209,11 +209,11 @@ class game:
         print(self.data[index])
 
     # get value at specific tile index
-    def get_index(self, index):
+    def get_index(self, index) -> int:
         return self.data[index]
 
     # tests if values have been fully set
-    def test_set(self):
+    def test_set(self) -> bool:
         for i in self.data.values():
             if len(i) > 0:
                 return False
@@ -233,12 +233,10 @@ class game:
             count += 1
 
 # code testing    
-def main():
+if __name__ == '__main__':
     # init client
     new_game = game()
     new_game.set_tiles_mod()
     #new_game.disp_tiles()
     new_game.config_data()
     new_game.disp_tiles()
-
-main()
